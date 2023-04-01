@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body
+    <?php echo 'style="background-color:aliceblue;"'?>
+>
+<?php include "header.html" ?>
 <form action="test.php" method="post">
     <label for="counter">Counter</label>
     <input type="number" name="counter">
@@ -47,7 +50,29 @@ do {
     echo "x = $x <br>";
     $x--;
 
-} while ($x > 0)
+} while ($x > 0);
+
+$miss = "Mississippi";
+
+for ($i = 0; $i < strlen($miss); $i++){
+    echo "<br>" . substr($miss, $i, 1);
+}
+echo "<hr>";
+$name = "Luke";
+include "functions.php";
+sayHello($name);
+echo "<hr>";
+newone();
+
+$address = "Fake Address 123 st";
+$city = "San Antonio";
+$state = "Texas";
+
+addressInfo($address, $city, $state);
+
+
+include "footer.html";
+
 ?>
 </body>
 </html>
